@@ -69,6 +69,12 @@
             <version>${io.rest.assured.version}</version>
         </dependency>
         <dependency>
+            <artifactId>jackson-core</artifactId>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <version>${jackson.core.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
             <artifactId>jackson-databind</artifactId>
             <groupId>com.fasterxml.jackson.core</groupId>
             <version>${jackson.databind.version}</version>
@@ -113,6 +119,7 @@
         <cucumber.core.version>7.34.2</cucumber.core.version>
         <cucumber.testng.version>7.31.0</cucumber.testng.version>
         <aspectj.version>1.9.21</aspectj.version>
+        <jackson.core.version>2.20.1</jackson.core.version>
         <jackson.annotation.version>2.20</jackson.annotation.version>
         <jackson.databind.version>2.20.0</jackson.databind.version>
         <json.version>20231013</json.version>

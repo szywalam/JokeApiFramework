@@ -17,8 +17,8 @@ public class Joke{
     @JsonIgnoreProperties(ignoreUnknown = true)
     private String delivery;
     private Flags flags;
-    private boolean safe;
-    private int id;
+    private Boolean safe;
+    private Integer id;
     private String lang;
     @JsonIgnoreProperties(ignoreUnknown = true)
     private String joke;

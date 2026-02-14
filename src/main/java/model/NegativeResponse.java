@@ -10,11 +10,11 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 @SuppressWarnings("unused")
 public class NegativeResponse {
-    public boolean error;
-    public boolean internalError;
-    public int code;
+    public Boolean error;
+    public Boolean internalError;
+    public Integer code;
     public String message;
     public ArrayList<String> causedBy;
     public String additionalInfo;
-    public long timestamp;
+    public Long timestamp;
 }

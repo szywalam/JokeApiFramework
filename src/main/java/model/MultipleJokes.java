@@ -10,7 +10,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 @SuppressWarnings("unused")
 public class MultipleJokes {
-    private boolean error;
-    private int amount;
+    private Boolean error;
+    private Integer amount;
     private List<Joke> jokes;
 }

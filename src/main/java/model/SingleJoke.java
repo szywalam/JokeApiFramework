@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonUnwrapped;
 @AllArgsConstructor
 @SuppressWarnings("unused")
 public class SingleJoke {
-    private boolean error;
+    private Boolean error;
     @JsonUnwrapped
     private Joke joke;
 }

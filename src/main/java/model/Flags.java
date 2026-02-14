@@ -9,10 +9,10 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 @SuppressWarnings("unused")
 public class Flags{
-    private boolean nsfw;
-    private boolean religious;
-    private boolean political;
-    private boolean racist;
-    private boolean sexist;
-    private boolean explicit;
+    private Boolean nsfw;
+    private Boolean religious;
+    private Boolean political;
+    private Boolean racist;
+    private Boolean sexist;
+    private Boolean explicit;
 }

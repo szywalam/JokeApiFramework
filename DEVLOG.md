@@ -45,7 +45,6 @@ private SingleJoke singleJoke;
 private MultipleJokes multipleJokes;
 private NegativeResponse negativeResponse;
 private int responseStatus;
-private int jokeId;
 ```
 During default initialization, _singleJoke_, _multipleJokes_ and _negativeResponse_ will have _null_ value, while _int_
 fields should have 0 as their value, which allows execution of decision-making statements, depending on whether they 

@@ -7,6 +7,20 @@ Due to the scope of the project, with majority of the files being small in size,
 having a commit per finished Class or Feature, with minor adjustments to other files if necessary.
 In case of larger changes to a specific file, which was implemented before, they should be contained within a separate commit
 to allow for easier tracking of changes and potential reversal.
+## Development process
+Development for this testing framework and scenarios has been split within sections, which will be listed here:
+1. Setting up Configuration class
+2. Initial POM setup
+3. POJO modelling for different expected payloads
+4. Client development (First REST client, then Joke API Client for specific requests)
+5. Feature files development
+6. TestRunner preparation
+7. Step Definition development
+
+Above steps have been supported by iterative work on DEVLOG.md and README.md files, with constant improvements to
+previously prepared Classes and files, if any requirement gaps or mistakes have been observed.
+Changes to anticipated POM were necessary at least twice due to missing dependencies or version mismatch
+and working on test implementation has shown gaps within the initial plan. 
 ## Design challenges
 ### POJO Modelling
 Required POJO models have been obtained by using the following, publicly available tool on the internet:\
@@ -59,3 +73,8 @@ Three example feature files have been provided:
 - One utilizing Scenarios, with 3 examples: simple positive scenario with validations in multiple steps, 1 for obtaining multiple jokes, 1 negative case
 - One with Scenario Outline, passing several Joke ID through Example section
 - One using Background section to get a specific joke, with validations performed within Scenario
+
+Due to additional layer of reporting setup with Allure Report framework, the results can be investigated more in depth,
+rather than on a simple pass/fail metric:
+![Maven_Results.png](docs_images/Maven_Results.png)
+![Allure_Report.png](docs_images/Allure_Report.png)

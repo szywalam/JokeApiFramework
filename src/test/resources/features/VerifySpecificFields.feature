@@ -16,3 +16,9 @@ Feature: Verify that Jokes return a positive response and specific fields match 
       | id       | 80                                                     |
       | safe     | true                                                   |
       | lang     | en                                                     |
+      | nsfw     | false                                                  |
+      | religious| false                                                  |
+      | political| false                                                  |
+      | racist   | false                                                  |
+      | sexist   | false                                                  |
+      | explicit | false                                                  |

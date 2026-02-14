@@ -28,3 +28,6 @@ To provide consistency and transparency in tracking AI supported development, al
 ```/* START AI */``` and ```/* END AI */```. 
 I am also providing a list of examples, where I utilized LLMs to support preparation of this project:
 - ChatGPT was used to convert pom.xml file into Markdown list of used dependencies alongside their  versions
+- During clients.JokeClient implementation I have inquired about transforming my first approach to a one utilizing Builder design pattern.
+Initial response has shown me how to handle the Path depending on Joke category and language, I have extrapolated that information
+to the rest of the possible combinations for the request. 

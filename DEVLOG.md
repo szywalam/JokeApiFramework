@@ -37,6 +37,23 @@ proper definition of parameters we're passing and ensure the validity of request
 Negative test scenarios are as important as positive ones (if not more important sometimes) and being able to check how SUT
 behaves when passed an invalid request is crucial to ensure the quality of the product.
 
+### Object initialization within Step Definition, branching statements
+For purpose of maintaining a simple data propagation between different Step Definitions, several objects have been declared with default
+values within the StepDefinitions class.
+``` 
+private SingleJoke singleJoke;
+private MultipleJokes multipleJokes;
+private NegativeResponse negativeResponse;
+private int responseStatus;
+private int jokeId;
+```
+During default initialization, _singleJoke_, _multipleJokes_ and _negativeResponse_ will have _null_ value, while _int_
+fields should have 0 as their value, which allows execution of decision-making statements, depending on whether they 
+contain a non-null value, which on larger codebases would be unfeasible to maintain, however in this case it 
+allows for reducing the amount of implemented different steps and their definitions, while keeping their state between
+different steps on a Scenario level further enabling having a separate step for validating the response (which could also
+be done during validation of the received response, however for purpose of this task I wanted to maintain most important
+data accessible for all the steps, as they do not send more than a single request).
 
 ## Testing approach
 To execute test scenarios, a combination of TestNG with Cucumber has been used.

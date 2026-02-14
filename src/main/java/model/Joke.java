@@ -11,10 +11,10 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @SuppressWarnings("unused")
 public class Joke{
     private String category;
-    @JsonIgnoreProperties(ignoreUnknown = true)
     private String type;
     @JsonIgnoreProperties(ignoreUnknown = true)
     private String setup;
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private String delivery;
     private Flags flags;
     private boolean safe;

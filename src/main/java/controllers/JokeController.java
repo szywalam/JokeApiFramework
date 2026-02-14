@@ -40,9 +40,8 @@ public class JokeController {
     }
 
     @Step("Get a negative response using Joke API")
-    public NegativeResponse getNegativeJoke(int numberOfJokes) {
+    public NegativeResponse getNegativeJoke() {
         JokeRequest request = JokeRequest.builder()
-                .amount(numberOfJokes)
                 .language("aaaaa")
                 .build();
         Response createResponse = jokeClient.getJokes(request);

@@ -7,6 +7,8 @@ import model.SingleJoke;
 import io.qameta.allure.Step;
 import clients.JokeClient.JokeRequest;
 import io.restassured.response.Response;
+import org.apache.http.HttpStatus;
+import org.testng.Assert;
 
 public class JokeController {
 
@@ -17,6 +19,7 @@ public class JokeController {
         JokeRequest request = JokeRequest.builder()
                 .build();
         Response createResponse = jokeClient.getJokes(request);
+        Assert.assertEquals(createResponse.getStatusCode(), HttpStatus.SC_OK);
         return createResponse.as(SingleJoke.class);
     }
 
@@ -27,6 +30,7 @@ public class JokeController {
                 .upperIdRange(id)
                 .build();
         Response createResponse = jokeClient.getJokes(request);
+        Assert.assertEquals(createResponse.getStatusCode(), HttpStatus.SC_OK);
         return createResponse.as(SingleJoke.class);
     }
 
@@ -36,6 +40,7 @@ public class JokeController {
                 .amount(numberOfJokes)
                 .build();
         Response createResponse = jokeClient.getJokes(request);
+        Assert.assertEquals(createResponse.getStatusCode(), HttpStatus.SC_OK);
         return createResponse.as(MultipleJokes.class);
     }
 
@@ -45,6 +50,7 @@ public class JokeController {
                 .language("aaaaa")
                 .build();
         Response createResponse = jokeClient.getJokes(request);
+        Assert.assertEquals(createResponse.getStatusCode(), HttpStatus.SC_BAD_REQUEST);
         return createResponse.as(NegativeResponse.class);
     }
 

@@ -4,7 +4,19 @@
 - Maven build tool installed locally on the machine
 ## How to build the project?
 
-## How to run only Cucumber scenarios?
+## How to run certain tags within Feature files?
+Using Maven and CLI, it is possible to run only certain tags, or exclude some of them from the Test Run. By default, it
+is done using the following command:
+```mvn test -Dcucumber.filter.tags="@TagName"```
+In case where there is necessity to execute more than one tag, or all of them without a single tag, the following keywords
+can be used within the cucumber.filter.tags property:
+- and - Executes **only** scenarios containing all of the mentioned tasks
+- or - Executes all scenarios containing either of the tags
+- not - Excludes the scenarios marked by this tag 
+
+Example from this framework could be:
+```mvn test -Dcucumber.filter.tags="@SpecificJoke and not @BackgroundExample"```
+which should run all scenarios containing @SpecificJoke tag, but only if they do not contain @BackgroundExample tag.
 
 ## Where can I find a test report?
 Executing a Test Suite with Maven automatically generates a report within CLI that executed it. The project includes 

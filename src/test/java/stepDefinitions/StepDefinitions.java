@@ -218,7 +218,7 @@ public class StepDefinitions {
         });
     }
 
-    /* AI START */
+    /* START AI */
     @Then("I validate if following fields match the expected values")
     public void iValidateIfFollowingFieldsMatchTheExpectedValues(io.cucumber.datatable.DataTable dataTable) {
 
@@ -343,7 +343,7 @@ public class StepDefinitions {
             }
         }
     }
-    /* AI END */
+    /* END AI */
 
     @Then("I validate the obtained error response")
     public void iValidateTheObtainedErrorResponse() {

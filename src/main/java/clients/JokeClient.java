@@ -19,7 +19,7 @@ public class JokeClient extends RestClient {
         if (request.getLanguage() != null) {
             spec.queryParam("lang", request.getLanguage());
         }
-        /* END AI */
+
 
         if (request.getBlacklistFlags() != null) {
             spec = spec.queryParam("blacklistFlags", String.join(",", request.getBlacklistFlags()));
@@ -70,4 +70,5 @@ public class JokeClient extends RestClient {
         private Integer upperIdRange;
         private Integer amount;
     }
+    /* END AI */
 }

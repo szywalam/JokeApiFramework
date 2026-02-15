@@ -2,8 +2,8 @@ package stepDefinitions;
 
 import controllers.JokeController;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.qameta.allure.Allure;
 import model.*;
 import org.testng.Assert;

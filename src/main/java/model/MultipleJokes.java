@@ -1,9 +1,10 @@
 package model;
 
-import lombok.Data;
-import java.util.List;
-import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @NoArgsConstructor

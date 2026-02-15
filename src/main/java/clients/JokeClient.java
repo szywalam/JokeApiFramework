@@ -1,30 +1,14 @@
 package clients;
 
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import lombok.Builder;
 import lombok.Getter;
 
 import java.util.List;
 
-import lombok.Builder;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
-
 
 public class JokeClient extends RestClient {
-
-    /* START AI */
-    @Builder
-    @Getter
-    public static class JokeRequest {
-        private List<String> categories;
-        private String language;
-        private List<String> blacklistFlags;
-        private String responseFormat;
-        private String jokeType;
-        private String searchQuery;
-        private Integer lowerIdRange;
-        private Integer upperIdRange;
-        private Integer amount;
-    }
 
     public Response getJokes(JokeRequest request) {
         RequestSpecification spec = basicRequestSpecification();
@@ -35,7 +19,7 @@ public class JokeClient extends RestClient {
         if (request.getLanguage() != null) {
             spec.queryParam("lang", request.getLanguage());
         }
-    /* END AI */
+        /* END AI */
 
         if (request.getBlacklistFlags() != null) {
             spec = spec.queryParam("blacklistFlags", String.join(",", request.getBlacklistFlags()));
@@ -70,5 +54,20 @@ public class JokeClient extends RestClient {
         }
 
         return spec.get(path);
+    }
+
+    /* START AI */
+    @Builder
+    @Getter
+    public static class JokeRequest {
+        private List<String> categories;
+        private String language;
+        private List<String> blacklistFlags;
+        private String responseFormat;
+        private String jokeType;
+        private String searchQuery;
+        private Integer lowerIdRange;
+        private Integer upperIdRange;
+        private Integer amount;
     }
 }

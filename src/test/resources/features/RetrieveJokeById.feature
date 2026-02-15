@@ -8,7 +8,7 @@ Feature: Obtain specific joke using its' ID
     Then I should get a joke with <joke_id> id
 
     Examples:
-    | joke_id |
-    | 200     |
-    | 150     |
-    | 5       |
+      | joke_id |
+      | 200     |
+      | 150     |
+      | 5       |

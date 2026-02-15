@@ -1,14 +1,14 @@
 package model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @SuppressWarnings("unused")
-public class Flags{
+public class Flags {
     private Boolean nsfw;
     private Boolean religious;
     private Boolean political;

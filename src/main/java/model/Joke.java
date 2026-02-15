@@ -1,15 +1,15 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @SuppressWarnings("unused")
-public class Joke{
+public class Joke {
     private String category;
     private String type;
     @JsonIgnoreProperties(ignoreUnknown = true)

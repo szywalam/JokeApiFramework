@@ -1,12 +1,12 @@
 package controllers;
 
 import clients.JokeClient;
+import clients.JokeClient.JokeRequest;
+import io.qameta.allure.Step;
+import io.restassured.response.Response;
 import model.MultipleJokes;
 import model.NegativeResponse;
 import model.SingleJoke;
-import io.qameta.allure.Step;
-import clients.JokeClient.JokeRequest;
-import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.testng.Assert;
 

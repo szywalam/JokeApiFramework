@@ -2,11 +2,13 @@
 ## Objective
 Creating a lightweight Rest API test automation framework with three different Cucumber feature scenarios, showcasing different
 engineering techniques
+
 ## Commit strategy
 Due to the scope of the project, with majority of the files being small in size, chosen commit strategy focuses on
 having a commit per finished Class or Feature, with minor adjustments to other files if necessary.
 In case of larger changes to a specific file, which was implemented before, they should be contained within a separate commit
 to allow for easier tracking of changes and potential reversal.
+
 ## Development process
 Development for this testing framework and scenarios has been split within sections, which will be listed here:
 1. Setting up Configuration class
@@ -21,6 +23,7 @@ Above steps have been supported by iterative work on DEVLOG.md and README.md fil
 previously prepared Classes and files, if any requirement gaps or mistakes have been observed.
 Changes to anticipated POM were necessary at least twice due to missing dependencies or version mismatch
 and working on test implementation has shown gaps within the initial plan. 
+
 ## Design challenges
 ### POJO Modelling
 Required POJO models have been obtained by using the following, publicly available tool on the internet:\
